@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: Survey Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+    #title {
+        margin-bottom: 0px;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 28px;
+    }
+
+    #radio-item {
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    #checkbox-item {
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    #textarea {
+        display: block;
+        border: 2px solid white;
+        border-radius: 9px;
+        margin-top: 12px;
+    }
+
+    #description {
+        margin-bottom: 0;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    body {
+        display: flex;
+        margin-top: 10px;
+        background-color: #07031a;
+    }
+
+    #survey-form {
+        margin: auto;
+        height: fit-content;
+    }
+
+    #name {
+        display: block;
+        border: 2px solid white;
+        border-radius: 9px;
+        height: 22px;
+        width: 300px;
+        /* border-color: brown; */
+    }
+
+    #email {
+        display: block;
+        border: 2px solid white;
+        border-radius: 9px;
+        height: 22px;
+        width: 300px;
+    }
+
+    #number {
+        display: block;
+        border: 2px solid white;
+        border-radius: 9px;
+        height: 22px;
+        width: 300px;
+    }
+
+    #dropdown {
+        display: block;
+        color: #07031a;
+    }
+
+    #submit {
+        margin-top: 12px;
+        margin-bottom: 23px;
+        border: 2px solid white;
+        border-radius: 6px;
+        background-color: #07031a;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+
+    }
+
+    #submit:hover {
+        transform: scale(1.1);
+        background-color: white;
+        color: #07031a;
+    }
+
+    #main {
+        background-color: #07031a;
+        width: 800px;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        border: 2px solid white;
+        margin: auto;
+    }
+
+    label {
+        display: block;
+    }
+
+    #name-label {
+        background-color: #07031a;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 6px;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        border: 0.5px solid white;
+        font-size: 14px;
+        margin-bottom: 13px;
+        margin-top: 13px;
+    }
+
+    #email-label {
+        background-color: #07031a;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 6px;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        border: 0.5px solid white;
+        font-size: 14px;
+        margin-bottom: 13px;
+        margin-top: 13px;
+    }
+
+    #number-label {
+        background-color: #07031a;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 6px;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        border: 0.5px solid white;
+        font-size: 14px;
+        margin-bottom: 13px;
+        margin-top: 13px;
+    }
+
+
+
+
+    .heading-input {
+        background-color: #07031a;
+        display: inline-block;
+        padding: 4px;
+        border-radius: 6px;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+        border: 0.5px solid white;
+        font-size: 14px;
+    }
+
+    #radio-section {}
+
+    #checkbox-section {
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: 400px) {
+        #main {
+            border: 2px solid #07031a;
+        }
+
+        #survey-form {
+            padding-left: 13px;
+        }
+    }
+
+    @media (min-width: 300px) and (max-width: 411px) {
+        #main {
+            border: 2px solid #07031a;
+        }
+
+        #survey-form {
+            padding-left: 0px;
+        }
+
+        #textarea {
+            width: 280px;
+            height: 120px;
+        }
+
+        #name {
+            width: 270px;
+        }
+
+        #email {
+            width: 270px;
+        }
+
+        #number {
+            width: 270px;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="main">
+        <form id="survey-form">
+            <div>
+                <h1 id="title">form title</h1>
+                <p id="description">A description of form</p>
+                <label for="name-input" id="name-label">Name:</label>
+                <input id="name" type="text" placeholder="name.." required>
+            </div>
+            <div>
+                <label for="email-input" id="email-label">Email:</label>
+                <input id="email" type="email" placeholder="email.." required>
+            </div>
+            <div>
+                <label for="number-input" id="number-label">Number:</label>
+                <input id="number" type="number" placeholder="number.." min="0" max="30">
+            </div>
+            <div>
+                <p class="heading-input">Select one option :</p>
+                <select name="" id="dropdown">
+                    <option value="">option 1</option>
+                    <option value="">option 2</option>
+                    <option value="">option 3</option>
+                </select>
+            </div>
+            <div id="radio-section">
+                <p class="heading-input">Select one option :</p>
+                <label for="item1" id="radio-item"> Item 1</label>
+                <input type="radio" name="g1" value="Item1">
+                <label for="item2" id="radio-item"> Item 2</label>
+                <input type="radio" name="g1" value="Item2">
+                <label for="item2" id="radio-item"> Item 3</label>
+                <input type="radio" name="g1" value="Item3">
+            </div>
+            <div id="checkbox-section">
+                <p class="heading-input">Select one or more options :</p>
+                <label for="item1" id="checkbox-item"> Item 1</label>
+                <input type="checkbox" value="12">
+                <label for="item2" id="checkbox-item"> Item 2</label>
+                <input type="checkbox" value="12">
+            </div>
+            <div>
+                <label class="heading-input" for="textbox"> content of textbox..</label>
+                <textarea name="text-area-input" id="textarea" cols="40" rows="10"></textarea>
+            </div>
+            <div>
+                <input id="submit" type="submit">
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
